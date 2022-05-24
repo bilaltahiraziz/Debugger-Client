@@ -29,14 +29,14 @@ class IssueCreate extends Component {
         .then(() => {
           msgAlert({
             heading: 'Issue created',
-            message: 'Now you\'ll for sure remember this!',
+            message: 'Be sure to update as you progress!',
             variant: 'success'
           })
         })
         .catch((error) => {
           msgAlert({
             heading: 'Issue creation failed',
-            message: 'Issue error: ' + error.message,
+            message: 'Issue creation error: ' + error.message,
             variant: 'danger'
           })
         })
@@ -64,11 +64,11 @@ class IssueCreate extends Component {
                 type='text'
                 name='description'
                 value={this.state.description}
-                placeholder='Task Description'
+                placeholder='Issue Description'
                 onChange={this.handleChange}
               />
             </Form.Group>
-            <Form.Group controlId='date'>
+            {/* <Form.Group controlId='date'>
               <Form.Label>Date</Form.Label>
               <Form.Control
                 required
@@ -78,7 +78,7 @@ class IssueCreate extends Component {
                 placeholder='Due Date: mm/dd/yyyy'
                 onChange={this.handleChange}
               />
-            </Form.Group>
+            </Form.Group> */}
             <Button className='createBt' type='submit'>
             Submit
             </Button>
@@ -88,4 +88,4 @@ class IssueCreate extends Component {
     }
 }
 
-export default withRouter(TaskCreate)
+export default withRouter(IssueCreate)

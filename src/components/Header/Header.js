@@ -5,8 +5,9 @@ import { Link, NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <Fragment>
-    <NavLink to='/issue/' className='nav-link'>Home</NavLink>
-    <NavLink to='/create-issue' className='nav-link'>Create Issue</NavLink>
+    {/* <NavLink to='/issue/' className='nav-link'>Home</NavLink> */}
+    <NavLink to='/issue' className='nav-link'>Create Issue</NavLink>
+    <NavLink to='/issue' className='nav-link'>Index Issue</NavLink>
     <div className='auth-func'>
       <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
       <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>

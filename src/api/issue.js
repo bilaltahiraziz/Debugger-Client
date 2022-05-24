@@ -18,50 +18,49 @@ export const createIssue = (data, user) => {
   })
 }
 
-export const indexTasks = (user) => {
+export const indexIssue = (user) => {
   return axios({
     method: 'GET',
-    url: apiUrl + '/task/',
+    url: apiUrl + '/issue/',
     headers: {
       Authorization: `Bearer ${user.token}`
     }
   })
 }
 
-export const showTask = (id, user) => {
+export const showIssue = (id, user) => {
   return axios({
     method: 'GET',
-    url: apiUrl + '/task/' + id,
+    url: apiUrl + '/issue/' + id,
     headers: {
       Authorization: `Bearer ${user.token}`
     }
   })
 }
 
-export const updateTask = (id, data, user) => {
+export const updateIssue = (id, data, user) => {
   return axios({
     method: 'PATCH',
-    url: apiUrl + '/task/' + id,
+    url: apiUrl + '/issue/' + id,
     headers: {
       Authorization: `Bearer ${user.token}`
     },
-    // I could also feed in the whole data object, like task: data, but then if I send it a data object with more keys it won't work
+    // I could also feed in the whole data object, like issue: data, but then if I send it a data object with more keys it won't work
     // But also I don't know when I would do that anyway
     data: {
-      task: {
+      issue: {
         title: data.title,
         description: data.description,
-        date: data.date,
         checked: data.checked
       }
     }
   })
 }
 
-export const deleteTask = (id, user) => {
+export const deleteIssue = (id, user) => {
   return axios({
     method: 'DELETE',
-    url: apiUrl + '/task/' + id,
+    url: apiUrl + '/issue/' + id,
     headers: {
       Authorization: `Bearer ${user.token}`
     }

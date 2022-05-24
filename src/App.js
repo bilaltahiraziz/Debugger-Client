@@ -11,6 +11,11 @@ import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
 
+import IssueCreate from './components/issues/IssueCreate'
+import IssueIndex from './components/issues/IssueIndex'
+import IssueUpdate from './components/issues/IssueUpdate'
+import ShowIssue from './components/issues/ShowIssue'
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -84,6 +89,35 @@ class App extends Component {
             path='/change-password'
             render={() => (
               <ChangePassword msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/issue/'
+            render={() => (
+              <IssueCreate msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            path='/issue/'
+            render={() => (
+              <IssueIndex msgAlert={this.msgAlert} user={user} />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact path='/issue/:id/update'
+            render={() => (
+              <IssueUpdate msgAlert={this.msgAlert} user={user}
+              />
+            )}
+          />
+          <AuthenticatedRoute
+            user={user}
+            exact path='/issue/:id'
+            render={() => (
+              <ShowIssue msgAlert={this.msgAlert} user={user} />
             )}
           />
         </main>
