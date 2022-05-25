@@ -53,6 +53,7 @@ handleSubmit = (event) => {
 
   updateIssue(match.params.id, this.state, user)
     .then(() => history.push(`/issue/${match.params.id}`))
+
     .then(() => {
       msgAlert({
         heading: 'Issue updated',
@@ -67,6 +68,7 @@ handleSubmit = (event) => {
         variant: 'danger'
       })
     })
+    .then(() => history.push('/issue' + match.params.id))
 }
 
 render () {

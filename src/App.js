@@ -16,6 +16,17 @@ import IssueIndex from './components/issues/IssueIndex'
 import IssueUpdate from './components/issues/IssueUpdate'
 import ShowIssue from './components/issues/ShowIssue'
 
+// import Particles from 'react-tsparticles'
+// import particleOptions from './components/Particle/ParticleOption.json'
+// import { loadFull } from 'tsparticles'
+
+// const particlesInit = async (main) => {
+//   await loadFull(main)
+// }
+
+// const particlesLoaded = (container) => {
+// }
+
 class App extends Component {
   constructor (props) {
     super(props)
@@ -120,6 +131,11 @@ class App extends Component {
               <ShowIssue msgAlert={this.msgAlert} user={user} />
             )}
           />
+          {/* <Particles
+            options={particleOptions}
+            init={particlesInit}
+            loaded={particlesLoaded}
+          /> */}
         </main>
       </Fragment>
     )
