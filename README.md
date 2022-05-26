@@ -1,37 +1,24 @@
-** GSD-Task-Force-Client **
+** Debugger-Client **
 
 # Links:
 
-- [Deployed Client](https://gsd-task-force.github.io/GSD-Task-Force-client/)
-- [API Repo](https://github.com/GSD-Task-Force/GSD-Task-Force-server)
-- [Deployed API](https://tranquil-lowlands-17148.herokuapp.com/)
+- [Deployed Client]()
+- [API Repo](https://github.com/bilaltahiraziz/Debugger-API)
+- [Deployed API]()
 
-# Planning:
+# Installation
+1. Fork and Clone the Repository
+2. Checkout to a  new branch
+3. Run ```NPM Install``` to install the needed dependencies
 
-- We began by discussing the requirements with our unified vision and function of the SPA. With all at agreement, we proceeded by creating a wireframe and ERD that to establish layouts and features that meet our demographic's needs. Next, we began delegating and planning out our groups work, schedule, and ground rules. Finally, we loosened our finger knots and began typing. 
+# Technologies
 
-# Process: 
-
-- We designated a member to be the SCRUM master and created a Trello board to track and manage our project. This allowed us to effectively communicate and delegate our tasks/requirements to each member of the group in high value increments to ensure the goal is met. Sprint meetings were held at the beginning of each work day to review and discuss the schedule and completion of tasks assigned for the day.  
-
-# Problem Solving:
-
-- We tackled our problems in a plethora of ways throughout in the development process, by either referring to online documentation, our previous projects, notes taken throughout lecture, and between members within the group. 
-
-# Technology:
-
-- JavaScript
-- HTML/JSX
-- SCSS/Bootstrap
-- Express
-- JSON
-- React
-- Mongoose
-- MongoDB
-- GitHub
-- DOM/API
-- Heroku
-- cURL
+|    Libraries      | Languages        | Frameworks              | Database          | Version Control
+|:-----------------------------------------|:----------------|:---------------------|:-----------------|:-----------------|
+| [React.js](https://reactjs.org/)       |    [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)        |  [Express](https://expressjs.com/) | [MongoDB](https://www.mongodb.com/)   | [GitHub](https://github.com/) |        | [Javascript](https://www.javascript.com/)          | [BootStrap](https://getbootstrap.com/)       |           |
+|  [Axios](https://www.npmjs.com/package/axios)         | [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)          |        |          |
+|    [Mongoose](https://mongoosejs.com/)        |           |        |         |
+|          |          |       |         |
 
 # Paths and Methods
 
@@ -40,16 +27,16 @@
   - Sign In (POST) URL + '/sign-in/'
   - Sign Out (DELETE) URL + '/sign-out/'
   - Change Password (PATCH) URL + '/change-password/'
-- Tasks
-  - Create Task (POST) URL + '/task/'
-  - Index Task (GET) URL + '/task/'
-  - Show Task (GET) URL +'/task/' + :id
-  - Update Task (PATCH) URL + '/task/' + :id
-  - Delete Task (DELETE) URL + '/task/' + :id
+- Issues
+  - Create Issue (POST) URL + '/issue/'
+  - Index Issue (GET) URL + '/issue/'
+  - Show Issue (GET) URL +'/issue/' + :id
+  - Update Issue (PATCH) URL + '/issue/' + :id
+  - Delete Issue (DELETE) URL + '/issue/' + :id
 
 # About this app:
 
-- GSD-Task-Force is a task list/reminder SPA that balances power and simplicity. This application allows members to quickly create, organize (completed/uncompleted), search, update, delete, and add due dates for each task.
+- Debugger-Tracker is a SPA  that gives users the ability to create and monitor bugs within a program. Allowing user to keep track, update the status, and resolve bugs in an effective and organized manner. 
 
 ## User stories:
 
@@ -57,12 +44,12 @@
 - A user must sign up to become a member.
 - A member must sign in.
 - A member can update their password.
-- A member can see all their Task titles and description.
-- A member can create a new Task list and have it displayed.
-- A member can update their Task list.
-- A member can delete their existing Task item/s. 
-- A member can cross off their Task item/s.
-- A member can only see their Task item/s.
+- A member can see all their Issue titles and description.
+- A member can create a new Issue list and have it displayed.
+- A member can update their Issue list.
+- A member can delete their existing Issue item/s. 
+- A member can cross off their Issue item/s.
+- A member can only see their Issue item/s.
 
 
 ## To register as a Member:
@@ -84,48 +71,39 @@
 3. Enter new password
 4. Click update
 
-## To see all Task item/s:
+## To see all Issue item/s:
 1. Click on Home
-2. Scroll down on the list of Task
+2. Scroll down on the list of Issues
 
-## To enter a Task item:
-1. Click on Create Task
-2. Enter Task title
-3. Enter Task description
-4. Enter Task due date
+## To enter a Issue item:
+1. Click on Create Issue
+2. Enter Issue title
+3. Enter Issue description
+4. Enter Issue due date
 5. Click submit
 
-## To update your Task item:
-1. Enter the changes you wish to make, in the form fields under your Task
+## To update your Issue item:
+1. Enter the changes you wish to make, in the form fields under your Issue
 2. Click Update
 
-## To cross off Task item:
+## To cross off Issue item:
 1. Click on the checkbox
 
-## To delete your Task item:
-1. Under your Task click Delete
+## To delete your Issue item:
+1. Under your Issue click Delete
 
 ## Wireframe:
-![Wifeframe](Wireframe.png)
+![Wifeframe](https://imgur.com/a/Tks7ivP)
 
 ## ERD:
-![ERD](ERD.png)
+![ERD](https://imgur.com/a/Usaq4oh)
 
-## Unfinished Tasks:
-
-- See each others tasks
-- Search by Task Description
-- Search by Due Date
+## App Homepage:
+![Application Screenshot](https://imgur.com/a/zHedADt)
 
 ## Stretch Goals:
 
 - Time based reminder
-- Activity schedule
-- Add images for each task
+- Add images for each issue
 - Add geographical location
-- Additional Task lists
 - Integrate with Google and Outlook Calendars
-
-## Thank you:
-
-I would like to thank all members of the instructional team, and GSD Team members for all their assistance and ideas on this project.

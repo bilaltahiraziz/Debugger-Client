@@ -29,7 +29,7 @@ class IssueCreate extends Component {
         .then(() => {
           msgAlert({
             heading: 'Issue created',
-            message: 'Be sure to update as you progress!',
+            message: 'Be sure to cross off as you progress!',
             variant: 'success'
           })
         })

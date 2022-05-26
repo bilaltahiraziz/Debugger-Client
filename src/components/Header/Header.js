@@ -5,9 +5,8 @@ import { Link, NavLink } from 'react-router-dom'
 
 const authenticatedOptions = (
   <Fragment>
-    {/* <NavLink to='/issue/' className='nav-link'>Home</NavLink> */}
-    <NavLink to='/issue' className='nav-link'>Create Issue</NavLink>
-    <NavLink to='/issue' className='nav-link'>Index Issue</NavLink>
+    <NavLink to='/issue' className='nav-link'>Bug Creation</NavLink>
+    <NavLink to='/issue' className='nav-link'>All Bugs</NavLink>
     <div className='auth-func'>
       <NavLink to='/change-password' className='nav-link'>Change Password</NavLink>
       <NavLink to='/sign-out' className='nav-link'>Sign Out</NavLink>
@@ -22,24 +21,17 @@ const unauthenticatedOptions = (
   </Fragment>
 )
 
-const alwaysOptions = (
-  <Fragment>
-    <NavLink exact to='/issue' className='nav-link'>Home</NavLink>
-  </Fragment>
-)
-
 const Header = ({ user }) => (
-  <Navbar bg='primary' variant='dark' expand='md'>
+  <Navbar bg='dark' variant='light' expand='md'>
     <Navbar.Brand>
-      <Link to='/' style={{ color: '#FFF', textDecoration: 'none' }}>Debugger-Client</Link>
+      <Link to='/' style={{ color: 'white', textDecoration: 'bold', fontSize: '50px' }}>Debuggr-Trackr</Link>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls='basic-navbar-nav' />
     <Navbar.Collapse id='basic-navbar-nav'>
       <Nav className='ml-auto'>
         {user && (
-          <span className='navbar-text mr-2'>Welcome, {user.email}</span>
+          <span className='navbar-text mr-2'>Good Morning, {user.email}</span>
         )}
-        {alwaysOptions}
         {user ? authenticatedOptions : unauthenticatedOptions}
       </Nav>
     </Navbar.Collapse>

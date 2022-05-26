@@ -174,12 +174,12 @@ class IssueIndex extends Component {
             <input type='text' onChange={this.inputHandler} />
             <form onSubmit={this.handleSubmit}>
               <select onChange={ event => this.handleSubmit(event) }>
-                <option value='showAll'>View All issues</option>
-                <option value='showChecked'>View Completed issues</option>
-                <option value='showUnchecked'>View In-Progress issues</option>
+                <option value='showAll'>ALL BUGS</option>
+                <option value='showChecked'>FINISHED BUGS</option>
+                <option value='showUnchecked'>UNFINISHED BUGS</option>
               </select>
             </form>
-            <h3>issue List:</h3>
+            <h3>LIST OF BUGS:</h3>
             <ul className='d-flex flex-wrap' >{issueJSX}</ul>
           </div>
         )
