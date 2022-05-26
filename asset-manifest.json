@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bilaltahiraziz.github.io/Debugger-Client/static/css/main.7504a3ff.chunk.css",
-    "main.js": "/bilaltahiraziz.github.io/Debugger-Client/static/js/main.41e49cf0.chunk.js",
-    "main.js.map": "/bilaltahiraziz.github.io/Debugger-Client/static/js/main.41e49cf0.chunk.js.map",
+    "main.js": "/bilaltahiraziz.github.io/Debugger-Client/static/js/main.eb800bdc.chunk.js",
+    "main.js.map": "/bilaltahiraziz.github.io/Debugger-Client/static/js/main.eb800bdc.chunk.js.map",
     "runtime-main.js": "/bilaltahiraziz.github.io/Debugger-Client/static/js/runtime-main.93ae00e0.js",
     "runtime-main.js.map": "/bilaltahiraziz.github.io/Debugger-Client/static/js/runtime-main.93ae00e0.js.map",
     "static/js/2.a19a377e.chunk.js": "/bilaltahiraziz.github.io/Debugger-Client/static/js/2.a19a377e.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.93ae00e0.js",
     "static/js/2.a19a377e.chunk.js",
     "static/css/main.7504a3ff.chunk.css",
-    "static/js/main.41e49cf0.chunk.js"
+    "static/js/main.eb800bdc.chunk.js"
   ]
 }
