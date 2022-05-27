@@ -8,9 +8,9 @@ body {
 
 .box{
     // CREATE TASK
-    background-color: #E9C6AF;
-    border: 3px solid #e74e31;
-    color: #437fed;
+    background-color: #212529;
+    border: 3px solid #212529;
+    color: #e74e31;
     display: block;
     font-family: 'Segoe UI',
     serif;
@@ -18,17 +18,17 @@ body {
     justify-content: center;
     overflow:auto;
     border-radius: 10px;
-    box-shadow: 5px 05px 5px 0px #d68587;
+    box-shadow: 5px 05px 5px 0px #212529;
     padding-top: 10px;
     margin-left: 10px;
     margin-top: 30px;
 }
 
 .issueList{
-    // IndexTask [170]
-    background-color: #E9C6AF;
+    // IndexTask
+    background-color: #212529;
     border-radius: 10px;
-    box-shadow: 5px 05px 5px 0px #d68587;
+    box-shadow: 5px 05px 5px 0px #212529;
     border: 3px solid #e74e31;
     color: blue;
 }

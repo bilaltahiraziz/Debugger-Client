@@ -37,17 +37,11 @@ class IssueIndex extends Component {
       })
   }
 
-    // this is the tricky part of the checkbox thing
     handleClick = (event) => {
-      // make shallow copy
       const issue = [...this.state.issue]
-      // get index of issue whose checkbox I clicked
-      // the reason that works is because I named the checkbox the id of issue it corresponds to
-      // in other words, event.target.name is the id of the issue
       const index = issue.findIndex((issue) => {
         return issue._id === event.target.name
       })
-      // switch checked from true to false or false to true in the shallow copy
       issue[index].checked = !issue[index].checked
       updateIssue(event.target.name, issue[index], this.props.user)
         .then(() => this.setState({ issue: issue }))
@@ -83,16 +77,6 @@ class IssueIndex extends Component {
         if (issue.length === 0) {
           issueJSX = 'No issues on your to do list. Try adding one.'
         } else if (showAll) {
-        // issueJSX takes state data and turns it into a JSX format
-        // It uses map to do that
-        // What we're doing with the searchbar is hopping in right before we map anything
-        // And we're saying "If this text we're giving you is anywhere in the title of any of the issues, send it over to be mapped"
-        // ("If not, don't")
-        // The only tricky part left is how we use indexOf
-        // Index of finds the spot in a string where another whole thing lives
-        // So ['a', 'b', 'c'].indexOf['c'] = 2
-        // If it isn't in the thing at all, indexOf returns -1
-        // So what we're doing with this line is saying "If the index of user text is anything but -1 in issue.title", map that issue.
           issueJSX = issue
             .filter(
               (issue) =>
