@@ -1,20 +1,29 @@
 {
   "files": {
-    "main.css": "/Debugger-Client/static/css/main.7504a3ff.chunk.css",
-    "main.js": "/Debugger-Client/static/js/main.1c4bcedb.chunk.js",
-    "main.js.map": "/Debugger-Client/static/js/main.1c4bcedb.chunk.js.map",
+    "main.css": "/Debugger-Client/static/css/main.d18c3487.chunk.css",
+    "main.js": "/Debugger-Client/static/js/main.90874fd1.chunk.js",
+    "main.js.map": "/Debugger-Client/static/js/main.90874fd1.chunk.js.map",
     "runtime-main.js": "/Debugger-Client/static/js/runtime-main.62e74fc2.js",
     "runtime-main.js.map": "/Debugger-Client/static/js/runtime-main.62e74fc2.js.map",
-    "static/js/2.a19a377e.chunk.js": "/Debugger-Client/static/js/2.a19a377e.chunk.js",
-    "static/js/2.a19a377e.chunk.js.map": "/Debugger-Client/static/js/2.a19a377e.chunk.js.map",
+    "static/js/2.57492901.chunk.js": "/Debugger-Client/static/js/2.57492901.chunk.js",
+    "static/js/2.57492901.chunk.js.map": "/Debugger-Client/static/js/2.57492901.chunk.js.map",
     "index.html": "/Debugger-Client/index.html",
-    "static/css/main.7504a3ff.chunk.css.map": "/Debugger-Client/static/css/main.7504a3ff.chunk.css.map",
-    "static/js/2.a19a377e.chunk.js.LICENSE.txt": "/Debugger-Client/static/js/2.a19a377e.chunk.js.LICENSE.txt"
+    "static/css/main.d18c3487.chunk.css.map": "/Debugger-Client/static/css/main.d18c3487.chunk.css.map",
+    "static/js/2.57492901.chunk.js.LICENSE.txt": "/Debugger-Client/static/js/2.57492901.chunk.js.LICENSE.txt",
+    "static/media/Island.66ea6d6b.mp3": "/Debugger-Client/static/media/Island.66ea6d6b.mp3",
+    "static/media/Snoooop.dd6f303e.mp3": "/Debugger-Client/static/media/Snoooop.dd6f303e.mp3",
+    "static/media/WHTKD.d153e146.mp3": "/Debugger-Client/static/media/WHTKD.d153e146.mp3",
+    "static/media/chili.c61f37cc.mp3": "/Debugger-Client/static/media/chili.c61f37cc.mp3",
+    "static/media/chupapi.5b809a4d.mp3": "/Debugger-Client/static/media/chupapi.5b809a4d.mp3",
+    "static/media/moe laugh.9d9964fb.mp3": "/Debugger-Client/static/media/moe laugh.9d9964fb.mp3",
+    "static/media/mw2.1664dcb5.mp3": "/Debugger-Client/static/media/mw2.1664dcb5.mp3",
+    "static/media/tyga.6226bfd0.mp3": "/Debugger-Client/static/media/tyga.6226bfd0.mp3",
+    "static/media/tyler.7194e1ab.mp3": "/Debugger-Client/static/media/tyler.7194e1ab.mp3"
   },
   "entrypoints": [
     "static/js/runtime-main.62e74fc2.js",
-    "static/js/2.a19a377e.chunk.js",
-    "static/css/main.7504a3ff.chunk.css",
-    "static/js/main.1c4bcedb.chunk.js"
+    "static/js/2.57492901.chunk.js",
+    "static/css/main.d18c3487.chunk.css",
+    "static/js/main.90874fd1.chunk.js"
   ]
 }
