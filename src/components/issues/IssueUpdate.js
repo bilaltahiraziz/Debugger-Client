@@ -57,7 +57,7 @@ handleSubmit = (event) => {
     .then(() => {
       msgAlert({
         heading: 'Issue updated',
-        message: 'Now it\'s different!',
+        message: 'Has been updated',
         variant: 'success'
       })
     })
