@@ -20,7 +20,7 @@ class ShowIssue extends Component {
       .then(() => {
         msgAlert({
           heading: 'Successfully Showing Issue',
-          message: 'WooHoo!',
+          message: 'Well Done!',
           variant: 'success'
         })
       })
@@ -41,7 +41,7 @@ handleDelete = () => {
     .then(() => {
       msgAlert({
         heading: 'Successfully Deleted Issue',
-        message: 'WooHoo!',
+        message: 'Well Done!',
         variant: 'success'
       })
     })
@@ -59,12 +59,11 @@ render () {
     return 'Loading...'
   }
 
-  const { title, description, date, owner } = this.state.issue
+  const { title, description, owner } = this.state.issue
   const { user, match, history } = this.props
   return (
     <div className='box2'>
       <h4>{title}</h4>
-      <p>Due By: {date}</p>
       <p>{description}</p>
       {user._id === owner && (
         <>
