@@ -2,9 +2,9 @@
 
 # Links:
 
-- [Deployed Client]()
+- [Deployed Client](https://bilaltahiraziz.github.io/Debugger-Client/)
 - [API Repo](https://github.com/bilaltahiraziz/Debugger-API)
-- [Deployed API]()
+- [Deployed API](https://pure-cove-81133.herokuapp.com/)
 
 # Installation
 1. Fork and Clone the Repository

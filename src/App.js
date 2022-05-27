@@ -16,14 +16,44 @@ import IssueIndex from './components/issues/IssueIndex'
 import IssueUpdate from './components/issues/IssueUpdate'
 import ShowIssue from './components/issues/ShowIssue'
 
+import Bruh from './assets/tyga.mp3'
+import Snoop from './assets/Snoooop.mp3'
+import Tyler from './assets/tyler.mp3'
+import WHTKD from './assets/WHTKD.mp3'
+import MW2 from './assets/mw2.mp3'
+import Moe from './assets/moe laugh.mp3'
+import Chili from './assets/chili.mp3'
+import Chupapi from './assets/chupapi.mp3'
+import Island from './assets/Island.mp3'
+import { Howl, Howler } from 'howler'
+
+const audioClips = [
+  { sound: Bruh, label: 'Tyga' },
+  { sound: Snoop, label: 'Snoop' },
+  { sound: Tyler, label: 'Tyler' },
+  { sound: MW2, label: 'MW2' },
+  { sound: Moe, label: 'Moe Laugh' },
+  { sound: Chili, label: 'Chili' },
+  { sound: Chupapi, label: 'Chupapi' },
+  { sound: Island, label: 'Island' },
+  { sound: WHTKD, label: 'WHTKD' }
+]
+
 class App extends Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      user: null,
-      msgAlerts: []
-    }
+SoundPlay = (src) => {
+  const sound = new Howl({
+    src
+  })
+  sound.play()
+}
+
+constructor (props) {
+  super(props)
+  this.state = {
+    user: null,
+    msgAlerts: []
   }
+}
 
   setUser = (user) => this.setState({ user })
 
@@ -44,86 +74,98 @@ class App extends Component {
     })
   }
 
-  render () {
-    const { msgAlerts, user } = this.state
-
+RenderButtonAndSound = () => {
+  return audioClips.map((soundObj, index) => {
     return (
-      <Fragment>
+      <button key={index} onClick={() => this.SoundPlay(soundObj.sound)}>
+        {soundObj.label}
+      </button>
+    )
+  })
+}
+
+render () {
+  Howler.volume(1.0)
+  const { msgAlerts, user } = this.state
+
+  return (
+    <Fragment>
 	      <Header user={user} />
 	      {msgAlerts.map((msgAlert) => (
-          <AutoDismissAlert
-            key={msgAlert.id}
-            heading={msgAlert.heading}
-            variant={msgAlert.variant}
-            message={msgAlert.message}
-            id={msgAlert.id}
-            deleteAlert={this.deleteAlert}
-          />
-        ))}
+        <AutoDismissAlert
+          key={msgAlert.id}
+          heading={msgAlert.heading}
+          variant={msgAlert.variant}
+          message={msgAlert.message}
+          id={msgAlert.id}
+          deleteAlert={this.deleteAlert}
+        />
+      ))}
 	      <main className='container'>
 	        <Route
-            path='/sign-up'
-            render={() => (
-              <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
-            )}
-          />
-          <Route
-            path='/sign-in'
-            render={() => (
-              <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/sign-out'
-            render={() => (
-              <SignOut
-                msgAlert={this.msgAlert}
-                clearUser={this.clearUser}
-                user={user}
-              />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/change-password'
-            render={() => (
-              <ChangePassword msgAlert={this.msgAlert} user={user} />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/issue/'
-            render={() => (
-              <IssueCreate msgAlert={this.msgAlert} user={user} />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            path='/issue/'
-            render={() => (
-              <IssueIndex msgAlert={this.msgAlert} user={user} />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            exact path='/issue/:id/update'
-            render={() => (
-              <IssueUpdate msgAlert={this.msgAlert} user={user}
-              />
-            )}
-          />
-          <AuthenticatedRoute
-            user={user}
-            exact path='/issue/:id'
-            render={() => (
-              <ShowIssue msgAlert={this.msgAlert} user={user} />
-            )}
-          />
-        </main>
-      </Fragment>
-    )
-  }
+          path='/sign-up'
+          render={() => (
+            <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
+          )}
+        />
+        <Route
+          path='/sign-in'
+          render={() => (
+            <SignIn msgAlert={this.msgAlert} setUser={this.setUser} />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          path='/sign-out'
+          render={() => (
+            <SignOut
+              msgAlert={this.msgAlert}
+              clearUser={this.clearUser}
+              user={user}
+            />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          path='/change-password'
+          render={() => (
+            <ChangePassword msgAlert={this.msgAlert} user={user} />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          path='/issue/'
+          render={() => (
+            <IssueCreate msgAlert={this.msgAlert} user={user} />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          path='/issue/'
+          render={() => (
+            <IssueIndex msgAlert={this.msgAlert} user={user} />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          exact path='/issue/:id/update'
+          render={() => (
+            <IssueUpdate msgAlert={this.msgAlert} user={user}
+            />
+          )}
+        />
+        <AuthenticatedRoute
+          user={user}
+          exact path='/issue/:id'
+          render={() => (
+            <ShowIssue msgAlert={this.msgAlert} user={user} />
+          )}
+        />
+        {this.RenderButtonAndSound()}
+      </main>
+    </Fragment>
+  )
+}
 }
 
 export default App
