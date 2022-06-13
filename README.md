@@ -93,13 +93,13 @@
 1. Under your Issue click Delete
 
 ## Wireframe:
-[Wifeframe](../Debugger-Client/src/assets/Wireframe.jpg)
+[Wifeframe](./src/assets/Wireframe.jpg)
 
 ## ERD:
-[ERD](../Debugger-Client/src/assets/ERD.png)
+[ERD](./src/assets/ERD.png)
 
 ## App Homepage:
-[Application Screenshot](../Debugger-Client/src/assets/Screenshot.png)
+[Application Screenshot](./src/assets/Screenshot.png)
 
 ## Stretch Goals:
 
