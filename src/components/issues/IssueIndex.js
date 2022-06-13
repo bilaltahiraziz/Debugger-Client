@@ -45,14 +45,6 @@ class IssueIndex extends Component {
       issue[index].checked = !issue[index].checked
       updateIssue(event.target.name, issue[index], this.props.user)
         .then(() => this.setState({ issue: issue }))
-        .catch((error) =>
-          this.props.msgAlert({
-            heading: 'Checked failure',
-            message:
-                  'Something went wrong with checking this box: ' + error.message,
-            variant: 'danger'
-          })
-        )
     }
 
       inputHandler = (event) => {

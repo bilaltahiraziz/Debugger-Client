@@ -93,13 +93,13 @@
 1. Under your Issue click Delete
 
 ## Wireframe:
-![Wifeframe](https://imgur.com/a/Tks7ivP)
+[Wifeframe](src\assets\Wireframe.jpg)
 
 ## ERD:
-![ERD](https://imgur.com/a/Usaq4oh)
+[ERD](src\assets\ERD.png)
 
 ## App Homepage:
-![Application Screenshot](https://imgur.com/a/zHedADt)
+[Application Screenshot](src\assets\Screenshot.png)
 
 ## Stretch Goals:
 
